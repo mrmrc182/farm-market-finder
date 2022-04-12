@@ -34,3 +34,48 @@ searchButton.addEventListener("click", function (event){
         })
     })
 })
+
+//Shawn API code here: 
+const marketList = document.getElementById('marketList');
+const searchBar = document.getElementById('searchBar');
+let farmMarkets = [];
+
+searchBar.addEventListener('click', function () {
+    const searchString = res.json();
+
+    const filteredMarkets = farmMarkets.filter((market) => {
+        return (
+            market.name.includes(searchString) ||
+            market.location.includes(searchString)
+        );
+    });
+    displayMarkets(filteredMarkets);
+});
+
+const loadMarkets = async () => {
+    try {
+        const res = await fetch('https://data.sandiegocounty.gov/resource/xazp-q2tj.json');
+        farmMarkets = await res.json();
+        displayMarkets(farmMarkets);
+    } catch (err) {
+    }
+};
+
+const displayMarkets = (markets) => {
+    const htmlString = markets
+        .map((market) => {
+            return `
+            <li class="market">
+                <h2>${market.name}</h2>
+                <p>Location: ${market.location}</p>
+                <img src="${market.image}"></img>
+            </li>
+        `;
+        })
+        .join('');
+    marketList.innerHTML = htmlString;
+};
+
+loadMarkets();
+
+
