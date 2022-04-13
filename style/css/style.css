@@ -1,60 +1,75 @@
-body{
-    background-color: bisque;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: white;
+body {
+  background-color: bisque;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
 }
 
-
-#results, #headtext, #searchHead{
-    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px, rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px, rgb(0, 0, 0) 0.705713px 2.91581px 0px, rgb(0, 0, 0) -0.287171px 2.98622px 0px, rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px, rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px, rgb(0, 0, 0) -2.94502px -0.571704px 0px, rgb(0, 0, 0) -2.59586px -1.50383px 0px, rgb(0, 0, 0) -1.96093px -2.27041px 0px, rgb(0, 0, 0) -1.11013px -2.78704px 0px, rgb(0, 0, 0) -0.137119px -2.99686px 0px, rgb(0, 0, 0) 0.850987px -2.87677px 0px, rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px, rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+#results,
+#headtext,
+#searchHead {
+  text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px,
+    rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px,
+    rgb(0, 0, 0) 0.705713px 2.91581px 0px,
+    rgb(0, 0, 0) -0.287171px 2.98622px 0px,
+    rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px,
+    rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px,
+    rgb(0, 0, 0) -2.94502px -0.571704px 0px,
+    rgb(0, 0, 0) -2.59586px -1.50383px 0px,
+    rgb(0, 0, 0) -1.96093px -2.27041px 0px,
+    rgb(0, 0, 0) -1.11013px -2.78704px 0px,
+    rgb(0, 0, 0) -0.137119px -2.99686px 0px,
+    rgb(0, 0, 0) 0.850987px -2.87677px 0px,
+    rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px,
+    rgb(0, 0, 0) 2.88051px -0.838247px 0px;
 }
 
-
-.header{
-    background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
+.header {
+  background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
 }
 
 #logo {
-  width: 600px;
+  width: 50%;
 }
 
 .header {
   border-style: solid;
 }
 
-.container{
-        height: 100%;
-        min-height: 500px !important;
+.container {
+  height: 100%;
+  min-height: 500px !important;
 }
 
-.wider{
-    background-color: rgba(255, 245, 234, 0.76);
+.row .col.s3 {
+  width: 100%;
 }
 
-.searchbox{
-    margin: 10px;
-    color: black;
+.wider {
+  background-color: rgba(255, 245, 234, 0.76);
+  margin: auto;
+}
+
+.searchbox {
+  margin: 10px;
+  color: black;
 }
 
 input:focus {
-    border-bottom: 1px solid rgb(0, 0, 0) !important;
-    box-shadow: 0 1px 0 0 rgb(0, 0, 0) !important;
-  }
+  border-bottom: 1px solid rgb(0, 0, 0) !important;
+  box-shadow: 0 1px 0 0 rgb(0, 0, 0) !important;
+}
 
-  ::-webkit-input-placeholder {
-    color: rgb(138, 138, 138);
-  }
+::-webkit-input-placeholder {
+  color: rgb(138, 138, 138);
+}
 
-.btn{
-    background-color: rgba(36, 102, 19, 0.61);
+.btn {
+  background-color: rgba(36, 102, 19, 0.61);
 }
 
 .btn:hover {
-    background-color: rgba(43, 149, 16, 0.61);
-  }
-
-
-
+  background-color: rgba(43, 149, 16, 0.61);
+}
