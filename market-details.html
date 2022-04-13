@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer's Market</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="./style/css/market-details.css" />
+  </head>
+  <body>
+    <!-- header with logo and app title -->
+    <header>
+      <img
+        id="logo"
+        src="./style/images/logotext.png"
+        alt="Farmer's Market Finder Logo"
+      />
+      <p>Farmer's Market Finder</p>
+    </header>
+
+    <!-- section with info on specific market -->
+    <section class="marketDetails">
+      <!-- Market name -->
+      <h4 id="marketName">Encinitas Station Certified Farmer's Market</h4>
+      <!-- stock image -->
+      <img
+        src="./style/images/fruit.jpg"
+        alt="fruits in a bowl"
+        id="fruitsImg"
+      />
+      <!-- Weather: current temerpature and icon -->
+      <p class="temp">
+        <strong>Temperature:</strong> <span id="temp">72</span> ℉
+        <span id="weatherIcon">☀️</span>
+      </p>
+      <!-- location -->
+      <p class="location">
+        <strong>Location:</strong
+        ><span id="location">
+          Corner Of E Street & Vulcan Ave In Parking Lot B</span
+        >
+        <br />
+        <span id="city">Encinitas</span>, CA <span id="zipcode">92024</span>
+      </p>
+      <!-- dates/times of operation -->
+      <div class="marketInformation">
+        <div class="dates">
+          <p>
+            <strong id="season1months">May - September:</strong>
+            <span class="daysOpen">Wednesday</span>,
+            <span id="season1months">5:00 PM - 8:00 PM</span>
+            <br />
+            <strong id="season2months">October - April:</strong>
+            <span class="daysOpen">Wednesday</span>,
+            <span id="season2hours">4:00 PM - 7:00 PM</span>
+          </p>
+        </div>
+        <!-- contact information -->
+        <div class="contact">
+          <p>
+            <strong>Market Manager:</strong>
+            <span id="marketManager">Tasha Ardalan & Brandon Janiss</span>
+            <br />
+            <strong>Phone:</strong>
+            <a href="tel:7605222053" id="phone">760-522-2053</a>
+            <br />
+            <strong>Email:</strong>
+            <a href="mailto:Manager@FarmersMarketEncinitas.com" id="email"
+              >Manager@FarmersMarketEncinitas.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- section with return to search button and new search bar -->
+    <section>
+      <!-- back to search results button -->
+      <a id="returnBtn" class="waves-effect waves-light btn"
+        >Return to Search</a
+      >
+      <!-- new search bar -->
+      <input class="searchInput" placeholder="city/zip" />
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
