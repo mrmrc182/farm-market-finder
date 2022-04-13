@@ -56,8 +56,11 @@ input::placeholder {
 
 #marketName {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px 5px 5px 5px;
   padding-top: 20px;
+  text-shadow: none;
+  color: black;
+  font-size: 25px;
 }
 
 #email {
@@ -73,9 +76,26 @@ input::placeholder {
   background-color: #f44336;
 }
 
+#returnBtn:hover {
+  background-color: #f2736a;
+}
+
+#searchBtn {
+  margin: 20px auto;
+  display: block;
+  width: 83px;
+  text-shadow: none;
+  font-weight: bold;
+  background-color: rgba(36, 102, 19, 0.61);
+}
+
+#searchBtn:hover {
+  background-color: rgba(43, 149, 16, 0.61);
+}
+
 .marketDetails {
   background-color: white;
-  width: 80%;
+  width: 95%;
   margin: auto;
 }
 
