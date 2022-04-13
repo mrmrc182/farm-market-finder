@@ -1,0 +1,95 @@
+body {
+    background-color: bisque;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: white;
+    text-shadow: rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 2.83487px 0.981584px 0px,
+      rgb(0, 0, 0) 2.35766px 1.85511px 0px, rgb(0, 0, 0) 1.62091px 2.52441px 0px,
+      rgb(0, 0, 0) 0.705713px 2.91581px 0px,
+      rgb(0, 0, 0) -0.287171px 2.98622px 0px,
+      rgb(0, 0, 0) -1.24844px 2.72789px 0px, rgb(0, 0, 0) -2.07227px 2.16926px 0px,
+      rgb(0, 0, 0) -2.66798px 1.37182px 0px, rgb(0, 0, 0) -2.96998px 0.42336px 0px,
+      rgb(0, 0, 0) -2.94502px -0.571704px 0px,
+      rgb(0, 0, 0) -2.59586px -1.50383px 0px,
+      rgb(0, 0, 0) -1.96093px -2.27041px 0px,
+      rgb(0, 0, 0) -1.11013px -2.78704px 0px,
+      rgb(0, 0, 0) -0.137119px -2.99686px 0px,
+      rgb(0, 0, 0) 0.850987px -2.87677px 0px,
+      rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px,
+      rgb(0, 0, 0) 2.88051px -0.838247px 0px;
+  }
+  header {
+    background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    text-align: center;
+    border: solid;
+    background-color: #bbdefb !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+  }
+  
+  strong {
+    font-weight: bolder;
+  }
+  
+  input:not([type]) {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  input::placeholder {
+    color: grey;
+  }
+  
+  #logo {
+    width: 50%;
+  }
+  
+  #fruitsImg {
+    width: 200px;
+    margin: auto;
+    display: block;
+  }
+  
+  #returnBtn {
+    margin: 20px auto;
+    display: block;
+    width: 230px;
+    text-shadow: none;
+    font-weight: bold;
+    background-color: #f44336;
+  }
+  
+  .searchResults {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    color: black;
+  }
+  
+  .searchResults p {
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: none;
+    color: black;
+  }
+  
+  .searchImage{
+      height: 100%;
+  }
+
+  #searchBtn {
+    margin: 20px auto;
+    display: block;
+    width: 83px;
+    text-shadow: none;
+    font-weight: bold;
+    background-color: rgba(36, 102, 19, 0.61);
+  }
+  
+  #searchBtn:hover {
+    background-color: rgba(43, 149, 16, 0.61);
+  }

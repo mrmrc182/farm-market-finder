@@ -3,6 +3,7 @@ var today = moment().format("MMM Do, YYYY");
 console.log(today);
 var searchButton = document.getElementById("search-btn");
 var testDiv = document.getElementById("test-div");
+var temp = document.getElementById("temp");
 
 searchButton.addEventListener("click", function (event){
     event.preventDefault();
@@ -28,14 +29,13 @@ searchButton.addEventListener("click", function (event){
         .then (function (data1){
             console.log(data1);
             console.log(data1.current.temp);
-            var tempDisplay = document.createElement("h3");
-            tempDisplay.textContent = "Current temp: " + JSON.stringify((data1.current.temp)) + " Degrees Fahrenheit";
-            testDiv.appendChild(tempDisplay);
+            temp.textContent = JSON.stringify(data1.current.temp);
         })
     })
 })
 
 //Shawn API code here: 
+
 
 
 

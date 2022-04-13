@@ -1,12 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmer's Market</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <link rel="stylesheet" href="./style/css/search-results.css" />
 </head>
+
 <body>
+    <!-- header with logo and app title -->
+    <header>
+        <img id="logo" src="./style/images/logotext.png" alt="Farmer's Market Finder Logo" />
+        <p>Farmer's Market Finder</p>
+    </header>
+
+    <!-- section with info on specific market -->
+    <section class="searchResults">
+
+        <div class="col s12 m7">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img class="searchImage" src="./style/images/search1.jpg">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content row">
+
+                        <div class="col m8">
+                            <span id="marketName">Encinitas Station Certified Farmer's Market</span>
+                            <br> <br>
+                            <span id="location">Corner Of E Street & Vulcan Ave In Parking Lot B</span>
+                            <br> <br>
+                            <span id="distance">Closest</span>
+                        </div>
+
+                        <div class="col m4 align-bottom">
+
+                            <strong>Temperature:</strong> <span id="temp">72</span> ℉
+                            <span id="weatherIcon">☀️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m7">
+                <div class="card horizontal">
+                    <div class="card-image">
+                        <img class="searchImage" src="./style/images/search2.jpg">
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content row">
+
+                            <div class="col m8">
+                                <span id="marketName">Encinitas Station Certified Farmer's Market</span>
+                                <br> <br>
+                                <span id="location">Corner Of E Street & Vulcan Ave In Parking Lot B</span>
+                                <br> <br>
+                                <span id="distance">Closest</span>
+                            </div>
+                            
+                            <div class="col m4 align-bottom">
+                                <strong>Temperature:</strong> <span id="temp">72</span> ℉
+                                <span id="weatherIcon">☀️</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m7">
+                    <div class="card horizontal">
+                        <div class="card-image">
+                            <img class="searchImage" src="./style/images/search3.jpg">
+                        </div>
+                        <div class="card-stacked">
+                            <div class="card-content row">
+                                <div class="col m8">
+                                    <span id="marketName">Encinitas Station Certified Farmer's Market</span>
+                                    <br> <br>
+                                    <span id="location">Corner Of E Street & Vulcan Ave In Parking Lot B</span>
+                                    <br> <br>
+                                    <span id="distance">Closest</span>
+                                </div>
+                                <div class="col m4 align-bottom">
+                                    <strong>Temperature:</strong> <span id="temp">72</span> ℉
+                                    <span id="weatherIcon">☀️</span>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+
+
+                    <div class="col s12 m7">
+                        <div class="card horizontal">
+                            <div class="card-image">
+                                <img class="searchImage" src="./style/images/search4.jpg">
+                            </div>
+                            <div class="card-stacked">
+                                <div class="card-content row">
+                                    <div class="col m8">
+                                        <span id="marketName">Encinitas Station Certified Farmer's Market</span>
+                                        <br> <br>
+                                        <span id="location">Corner Of E Street & Vulcan Ave In Parking Lot B</span>
+                                        <br> <br>
+                                        <span id="distance">Closest</span>
+                                    </div>
+                                    <div class="col m4 align-bottom">
+                                        <strong>Temperature:</strong> <span id="temp">72</span> ℉
+                                        <span id="weatherIcon">☀️</span>
+                                    </div>
+                                </div>
+                            </div> 
+                        </div>
+    </section>
+
+   
+    <section>
     
+        <a id="returnBtn" class="waves-effect waves-light btn">Return to Search</a>
+     
+        <input class="searchInput" placeholder="city/zip" />
+
+        <a id="searchBtn" class="waves-effect waves-light btn">Search</a>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
+
 </html>
