@@ -17,18 +17,86 @@ body {
     rgb(0, 0, 0) 1.74541px -2.43999px 0px, rgb(0, 0, 0) 2.44769px -1.73459px 0px,
     rgb(0, 0, 0) 2.88051px -0.838247px 0px;
 }
-
-.header {
+header {
   background-image: url("https://images.unsplash.com/photo-1488459716781-31db52582fe9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   background-repeat: no-repeat;
   background-size: auto;
   background-position: center;
+  text-align: center;
+  border: solid;
+  background-color: #bbdefb !important;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+input:not([type]) {
+  width: 50%;
+  display: block;
+  margin: 20px auto;
+}
+
+input::placeholder {
+  color: grey;
 }
 
 #logo {
-  width: 600px;
+  width: 50%;
 }
 
-.header {
-  border-style: solid;
+#fruitsImg {
+  width: 200px;
+  margin: auto;
+  display: block;
+}
+
+#marketName {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+}
+
+#email {
+  overflow-wrap: break-word;
+}
+
+#returnBtn {
+  margin: 20px auto;
+  display: block;
+  width: 230px;
+  text-shadow: none;
+  font-weight: bold;
+  background-color: #f44336;
+}
+
+.marketDetails {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+}
+
+.marketDetails p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: none;
+  color: black;
+}
+
+.temp,
+.location {
+  text-align: center;
+}
+
+.marketInformation {
+  display: flex;
+}
+
+.dates,
+.contact {
+  width: 40%;
+  margin: auto;
+  padding: 0 15px;
 }
