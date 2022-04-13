@@ -7,13 +7,20 @@ var temp = document.getElementById("temp");
 
 searchButton.addEventListener("click", function (event){
     event.preventDefault();
-    // var queryName = cityInput.value.trim();
-    var geocodeURL = "https://api.openweathermap.org/geo/1.0/direct?q=Encinitas&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
+    var queryName = cityInput.value.trim();
+    console.log(queryName);
+    // var geocodeURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + queryName + "&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
+    // I want to check if the query input is a zip code or a city name
+    //THEN i want to grab the lat lon of that data.
     // if (queryName){
     //     cityInput.value = " ";
     // } else {
     //     alert("Please enter the name of a city or a zip code");
     // }
+    // clearly define input and output before trying to pseudocode
+    // in function we need to log market name and market city
+    // issue of input ID on page
+    // check review part 2
     fetch(geocodeURL)
     .then(function (response){
         return response.json();
@@ -29,52 +36,7 @@ searchButton.addEventListener("click", function (event){
         .then (function (data1){
             console.log(data1);
             console.log(data1.current.temp);
-            temp.textContent = JSON.stringify(data1.current.temp);
+            // temp.textContent = data1.current.temp;
         })
     })
 })
-
-//Shawn API code here: 
-const marketList = document.getElementById('marketList');
-const searchBar = document.getElementById('searchBar');
-let farmMarkets = [];
-
-searchButton.addEventListener('click', function () {
-    const searchString = res.json();
-
-    const filteredMarkets = farmMarkets.filter((market) => {
-        return (
-            market.name.includes(searchString) ||
-            market.location.includes(searchString)
-        );
-    });
-    displayMarkets(filteredMarkets);
-});
-
-const loadMarkets = async () => {
-    try {
-        const res = await fetch('https://data.sandiegocounty.gov/resource/xazp-q2tj.json');
-        farmMarkets = await res.json();
-        displayMarkets(farmMarkets);
-    } catch (err) {
-    }
-};
-
-const displayMarkets = (markets) => {
-    const htmlString = markets
-        .map((market) => {
-            return `
-            <li class="market">
-                <h2>${market.name}</h2>
-                <p>Location: ${market.location}</p>
-                <img src="${market.image}"></img>
-            </li>
-        `;
-        })
-        .join('');
-    marketList.innerHTML = htmlString;
-};
-
-loadMarkets();
-
-
