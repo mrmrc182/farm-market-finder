@@ -43,10 +43,6 @@ body {
   min-height: 500px !important;
 }
 
-.row .col.s3 {
-  width: 100%;
-}
-
 .wider {
   background-color: rgba(255, 245, 234, 0.76);
   margin: auto;
@@ -72,4 +68,28 @@ input:focus {
 
 .btn:hover {
   background-color: rgba(43, 149, 16, 0.61);
+}
+
+.row .col.s3 {
+  width: 100%;
+  margin-left: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media only screen and (min-width: 993px) {
+  .row .col.l10 {
+    width: 100%;
+    margin-left: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .row .col.offset-m3 {
+    margin-left: 0;
+  }
 }
