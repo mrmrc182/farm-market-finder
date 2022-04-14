@@ -16,9 +16,9 @@ var searchTemp3 = document.getElementById("searchTemp3");
 var searchWeatherIcon3 = document.getElementById("searchWeatherIcon3");
 
 function init(){
-    var initialSearch = sessionStorage.getItem("City");
-    console.log(initialSearch);
-    var geocodeCityURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + initialSearch + "&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
+    var queryName = sessionStorage.getItem("City");
+    console.log(queryName);
+    var geocodeCityURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + queryName + "&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
     fetch(geocodeCityURL)
     .then(function (response){
         return response.json();
@@ -32,32 +32,52 @@ function init(){
             return response.json();
         })
         .then (function (data1){
-            console.log(data1);
-            console.log(data1.current.temp);
             searchTemp1.textContent = JSON.stringify(data1.current.temp);
             console.log(searchTemp1); 
             var iconCode1 = data1.current.weather[0].icon;
-            console.log(iconCode1);
             var iconURL = "https://openweathermap.org/img/wn/" + iconCode1 + ".png";
             searchWeatherImage1.setAttribute("src", iconURL);
          
             //searchweatherIccon 2
             searchTemp2.textContent = JSON.stringify(data1.current.temp);
-            console.log(searchTemp2); 
             var iconCode2 = data1.current.weather[0].icon;
-            console.log(iconCode2);
             var iconURL = "https://openweathermap.org/img/wn/" + iconCode2 + ".png";
             searchWeatherImage2.setAttribute("src", iconURL);
             //searchWeatherIcon 3
             searchTemp3.textContent = JSON.stringify(data1.current.temp);
-            console.log(searchTemp3); 
             var iconCode3 = data1.current.weather[0].icon;
-            console.log(iconCode3);
             var iconURL = "https://openweathermap.org/img/wn/" + iconCode3 + ".png";
             searchWeatherImage3.setAttribute("src", iconURL);
         })
     })
+    var initialSearch = queryName.toUpperCase();
+    var marketName1 = document.getElementById("marketName1");
+    var location1 = document.getElementById("location1");
+    var marketName2 = document.getElementById("marketName2");
+    var location2 = document.getElementById("location2");
+    var marketName3 = document.getElementById("marketName3");
+    var location3 = document.getElementById("location3");
+    console.log(queryName);
+    var geocodeCityURL = "https://data.sandiegocounty.gov/resource/xazp-q2tj.json?city=" + initialSearch;
+    
+    fetch(geocodeCityURL)
+    .then(function (response){
+        return response.json();
+    
+    })
+    .then(function (data){
+        marketName1.textContent = data[0].market_name;
+        location1.textContent = data[0].market_location;
+        marketName2.textContent = data[1].market_name;
+        location2.textContent = data[1].market_location;
+        marketName3.textContent = data[2].market_name;
+        location3.textContent = data[2].market_location;
+
+    })
 }
+
+
+
 init();
 
 //click anywhere on div element, will take them to the details page which will populate with information from the city
@@ -99,15 +119,6 @@ searchButton.addEventListener("click", function (event){
         .then (function (data1){
             console.log(data1);
             console.log(data1.current.temp);
-            //market-details dynamic display
-            // temp.textContent = JSON.stringify(data1.current.temp);
-            // var img = document.createElement("img");
-            // var iconCode = data1.current.weather[0].icon;
-            // console.log(iconCode);
-            // var iconURL = "https://openweathermap.org/img/wn/" + iconCode + ".png";
-            // img.setAttribute("src", iconURL);
-            // weatherIcon.appendChild(img);
-            //search dynamic display
             searchTemp1.textContent = JSON.stringify(data1.current.temp);
             console.log(searchTemp1); 
             var iconCode1 = data1.current.weather[0].icon;
@@ -129,6 +140,33 @@ searchButton.addEventListener("click", function (event){
             var iconURL = "https://openweathermap.org/img/wn/" + iconCode3 + ".png";
             searchWeatherImage3.setAttribute("src", iconURL);
         })
+    })
+    var initialSearch = queryName.toUpperCase();
+    console.log(initialSearch);
+    var marketName1 = document.getElementById("marketName1");
+    var location1 = document.getElementById("location1");
+    var marketName2 = document.getElementById("marketName2");
+    var location2 = document.getElementById("location2");
+    var marketName3 = document.getElementById("marketName3");
+    var location3 = document.getElementById("location3");
+    console.log(initialSearch);
+    var geocodeCityURL = "https://data.sandiegocounty.gov/resource/xazp-q2tj.json?city=" + initialSearch;
+    
+    fetch(geocodeCityURL)
+    .then(function (response){
+        return response.json();
+    
+    })
+    .then(function (data){
+        console.log(data);
+        console.log(data[0].market_name);
+        marketName1.textContent = data[0].market_name;
+        location1.textContent = data[0].market_location;
+        marketName2.textContent = data[1].market_name;
+        location2.textContent = data[1].market_location;
+        marketName3.textContent = data[2].market_name;
+        location3.textContent = data[2].market_location;
+
     })
 })
 
