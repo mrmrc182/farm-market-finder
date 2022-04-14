@@ -60,6 +60,24 @@ function init(){
 }
 init();
 
+//click anywhere on div element, will take them to the details page which will populate with information from the city
+var result1 = document.getElementById("result1");
+var result2 = document.getElementById("result2");
+var result3 = document.getElementById("result3");
+
+result1.addEventListener("click", function(){
+    window.location.href= "./market-details.html?q=Encinitas";
+    //will need to pull the market name
+})
+result2.addEventListener("click", function(){
+    window.location.href= "./market-details.html?q=Encinitas";
+    //will need to pull the market name
+})
+result3.addEventListener("click", function(){
+    window.location.href= "./market-details.html?q=Encinitas";
+    //will need to pull the market name
+})
+
 //when you click the button, populates a new search page
 searchButton.addEventListener("click", function (event){
     event.preventDefault();
