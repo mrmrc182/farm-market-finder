@@ -12,9 +12,9 @@ returnToSearch.addEventListener("click", function(){
     window.location.href = "./search.html?q=Encinitas";
 })
 
+// fetch  market data
+//fetch weather data
+
 //fetch market name from previous page
 //use that to populate market info, including city
 //grab city data populated by the API to then pull data for weather
-
-//when a user loads up the home page
-//clear local storage
