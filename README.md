@@ -1,6 +1,6 @@
-# Farmer's Market Finder
+# Off To The Market
 
-The Farmer’s Market Finder App will allow users to locate Farmer’s Markets throughout San Diego County based on their location. The purpose of this app is to connect consumers who value healthy eating and supporting local producers to Farmer’s Markets near them. The user will input their city name to generate a list of markets near them, sorted by distance. The App will provide information on each Farmer’s Market such as location, dates and times of operation, and manager contact information. The App will also provide a weather forecast to the user based on the location of the Farmer’s Markets.
+"Off To The Market" is an app that will allow users to locate Farmer’s Markets throughout San Diego County based on their location. The purpose of this app is to connect consumers who value healthy eating and supporting local producers to Farmer’s Markets near them. The user will input their city name to generate a list of markets near them, sorted by distance. The App will provide information on each Farmer’s Market such as location, dates and times of operation, and manager contact information. The App will also provide a weather forecast to the user based on the location of the Farmer’s Markets.
 
 ---
 
@@ -57,4 +57,4 @@ Data Used:
 
 ## Deployed Application
 
-### [Farmer's Market Finder](#)
+### [Off To The Market](#)
