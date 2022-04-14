@@ -102,3 +102,6 @@ body {
   #searchWeatherIcon3 img{
     width: 25px;
   }
+  #result1, #result2, #result3:hover{
+    cursor: pointer;
+  }
