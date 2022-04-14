@@ -93,3 +93,12 @@ body {
   #searchBtn:hover {
     background-color: rgba(43, 149, 16, 0.61);
   }
+  #searchWeatherIcon1 img{
+    width: 25px;
+  }
+  #searchWeatherIcon2 img{
+    width: 25px;
+  }
+  #searchWeatherIcon3 img{
+    width: 25px;
+  }

@@ -121,4 +121,6 @@ input::placeholder {
   padding: 0 15px;
 }
 
-/* editing */
+#weatherIcon img{
+  width: 25px;
+}
