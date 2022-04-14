@@ -8,5 +8,6 @@ searchButton.addEventListener("click", function (event){
     event.preventDefault();
     var queryName = cityInput.value.trim();
     console.log(queryName);
-    window.location.href= "./search.html";
+    window.location.href= "./search.html?q=" + queryName;
+    localStorage.setItem("City", queryName);
 })
