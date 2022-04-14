@@ -9,5 +9,5 @@ searchButton.addEventListener("click", function (event){
     var queryName = cityInput.value.trim();
     console.log(queryName);
     window.location.href= "./search.html?q=" + queryName;
-    localStorage.setItem("City", queryName);
+    sessionStorage.setItem("City", queryName);
 })
