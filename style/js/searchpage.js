@@ -16,7 +16,7 @@ var searchTemp3 = document.getElementById("searchTemp3");
 var searchWeatherIcon3 = document.getElementById("searchWeatherIcon3");
 
 function init(){
-    var initialSearch = localStorage.getItem("City");
+    var initialSearch = sessionStorage.getItem("City");
     console.log(initialSearch);
     var geocodeCityURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + initialSearch + "&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
     fetch(geocodeCityURL)
