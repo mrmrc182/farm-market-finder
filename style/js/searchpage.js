@@ -73,11 +73,20 @@ function init(){
         location2.textContent = data[1].market_location;
         marketName3.textContent = data[2].market_name;
         location3.textContent = data[2].market_location;
-        var marketID = data[0].id;
-        console.log(marketID);
+        var marketID1 = data[0].id;
+        var marketID2 = data[1].id;
+        var marketID3 = data[2].id;
         //first result button
         result1.addEventListener("click", function(){
-            window.location.href= "./market-details.html?id=" + marketID;
+            window.location.href= "./market-details.html?id=" + marketID1;
+            //will need to pull the market name
+        })
+        result2.addEventListener("click", function(){
+            window.location.href= "./market-details.html?id=" + marketID2;
+            //will need to pull the market name
+        })
+        result3.addEventListener("click", function(){
+            window.location.href= "./market-details.html?id=" + marketID3;
             //will need to pull the market name
         })
 
