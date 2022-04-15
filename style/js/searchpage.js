@@ -18,7 +18,7 @@ var searchWeatherIcon3 = document.getElementById("searchWeatherIcon3");
 function init(){
     var queryName = sessionStorage.getItem("City");
     console.log(queryName);
-    var geocodeCityURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + queryName + "&limit=5&appid=a914282a4259cce175b4a3f34d3738fb";
+    var geocodeCityURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + queryName + "&limit=5&appid=5926d68f5ae2aaf4153126ac58e885f6";
     fetch(geocodeCityURL)
     .then(function (response){
         return response.json();
@@ -26,7 +26,7 @@ function init(){
     .then(function (data){
         var geocodeLat = JSON.stringify(data[0].lat);
         var geocodeLon = JSON.stringify(data[0].lon);
-        queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + geocodeLat + "&lon=" + geocodeLon + "&appid=a914282a4259cce175b4a3f34d3738fb&units=imperial";
+        queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + geocodeLat + "&lon=" + geocodeLon + "&appid=5926d68f5ae2aaf4153126ac58e885f6&units=imperial";
         fetch(queryURL)
         .then(function(response){
             return response.json();

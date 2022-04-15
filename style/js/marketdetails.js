@@ -8,6 +8,7 @@ var daysOpen = document.getElementById("daysOpen");
 var season1Months = document.getElementById("season1months");
 var season1Hours = document.getElementById("season1hours");
 var marketZip = document.getElementById("zipcode");
+
 var getMarketData = function () {
     var urlMarketID = document.location.search;
     var marketID = urlMarketID.split("=")[1];
@@ -33,7 +34,7 @@ var getMarketData = function () {
             var getWeatherData = function () {
                 var weatherCity = marketCity.textContent;
                 var marketTemp = document.getElementById("marketTemp");
-                var weatherAPIURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + weatherCity + "&limit=3&appid=a914282a4259cce175b4a3f34d3738fb";
+                var weatherAPIURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + weatherCity + "&limit=3&appid=5926d68f5ae2aaf4153126ac58e885f6";
                 fetch(weatherAPIURL)
                     .then(function (response) {
                         return response.json();
@@ -41,42 +42,42 @@ var getMarketData = function () {
                     .then(function (data) {
                         var geocodeLat = JSON.stringify(data[0].lat);
                         var geocodeLon = JSON.stringify(data[0].lon);
-                        var nextURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + geocodeLat + "&lon=" + geocodeLon + "&appid=a914282a4259cce175b4a3f34d3738fb&units=imperial";
-
-                        var returnToSearch = document.getElementById("returnBtn");
-                        returnToSearch.addEventListener("click", function () {
-                            window.location.href = "./search.html?q=" + marketCity;
-                        })
-                        var searchButton = document.getElementById("searchBtn");
-                        var inputType = document.getElementById("searchInput");
-                        searchButton.addEventListener("click", function (event) {
-                            event.preventDefault();
-                            sessionStorage.clear();
-                            var queryName = inputType.value.trim();
-                            console.log(queryName);
-                            window.location.href = "./search.html?q=" + queryName;
-                            sessionStorage.setItem("City", queryName);
-                            fetch(nextURL)
-                                .then(function (response) {
-                                    return response.json();
-                                })
-                                .then(function (data1) {
-                                    console.log(data1);
-                                    marketTemp.textContent = JSON.stringify(data1.current.temp);
-                                    console.log(weatherIcon);
-                                    var iconCode1 = data1.current.weather[0].icon;
-                                    console.log(iconCode1);
-                                    var iconURL = "https://openweathermap.org/img/wn/" + iconCode1 + ".png";
-                                    console.log(iconURL);
-                                    weatherIcon.setAttribute("src", iconURL);
-                                    // the search click event starts here
-                                })
-                        })
+                        var nextURL = "https://api.openweathermap.org/data/2.5/onecall?lat=" + geocodeLat + "&lon=" + geocodeLon + "&appid=5926d68f5ae2aaf4153126ac58e885f6&units=imperial";
+                        fetch(nextURL)
+                            .then(function (response) {
+                                return response.json();
+                            })
+                            .then(function (data1) {
+                                console.log(data1);
+                                marketTemp.textContent = JSON.stringify(data1.current.temp);
+                                console.log(weatherIcon);
+                                var iconCode1 = data1.current.weather[0].icon;
+                                console.log(iconCode1);
+                                var iconURL = "https://openweathermap.org/img/wn/" + iconCode1 + ".png";
+                                console.log(iconURL);
+                                weatherIcon.setAttribute("src", iconURL);
+                            })
                     })
-            }
+                    //buttons
+                var returnToSearch = document.getElementById("returnBtn");
+                returnToSearch.addEventListener("click", function () {
+                    window.location.href = "./search.html?q=" + weatherCity;
+                })
+                var searchButton = document.getElementById("searchBtn");
+                var inputType = document.getElementById("searchInput");
+                searchButton.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    sessionStorage.clear();
+                    var queryName = inputType.value.trim();
+                    console.log(queryName);
+                    window.location.href = "./search.html?q=" + queryName;
+                    sessionStorage.setItem("City", queryName);
+                })
+            } 
             getWeatherData();
         })
-}
+    }
+        
 getMarketData();
 
 // fetch  market data
