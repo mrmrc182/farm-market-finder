@@ -66,12 +66,20 @@ function init(){
     
     })
     .then(function (data){
+        console.log(data);
         marketName1.textContent = data[0].market_name;
         location1.textContent = data[0].market_location;
         marketName2.textContent = data[1].market_name;
         location2.textContent = data[1].market_location;
         marketName3.textContent = data[2].market_name;
         location3.textContent = data[2].market_location;
+        var marketID = data[0].id;
+        console.log(marketID);
+        //first result button
+        result1.addEventListener("click", function(){
+            window.location.href= "./market-details.html?id=" + marketID;
+            //will need to pull the market name
+        })
 
     })
 }
@@ -85,10 +93,12 @@ var result1 = document.getElementById("result1");
 var result2 = document.getElementById("result2");
 var result3 = document.getElementById("result3");
 
-result1.addEventListener("click", function(){
-    window.location.href= "./market-details.html?q=Encinitas";
-    //will need to pull the market name
-})
+
+
+// result1.addEventListener("click", function(){
+//     window.location.href= "./market-details.html?q=Encinitas";
+//     //will need to pull the market name
+// })
 result2.addEventListener("click", function(){
     window.location.href= "./market-details.html?q=Encinitas";
     //will need to pull the market name
