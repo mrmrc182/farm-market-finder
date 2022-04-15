@@ -108,6 +108,7 @@ input:focus {
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: none;
   color: black;
+  overflow-wrap: break-word;
 }
 
 .temp,
